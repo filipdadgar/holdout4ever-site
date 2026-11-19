@@ -40,20 +40,11 @@
   <p>The game has no accounts and asks no one for personal data. If a device shares an age range under 13, the game tells Google to treat ad requests as for a child, which limits the ads shown, and it never asks about tracking.</p>
 
   <h2>Contact</h2>
-  <p>Questions: <span class="email" data-u="holdout" data-d="dadgar.se">holdout (at) dadgar.se</span></p>
+  <p>Questions: holdout (at) dadgar.se</p>
 </main>
 <footer>
   <a href="./">Home</a>
   <a href="support.html">Support</a>
 </footer>
-<script>
-  document.querySelectorAll('.email').forEach(function (el) {
-    var a = el.dataset.u + '@' + el.dataset.d;
-    var link = document.createElement('a');
-    link.href = 'mailto:' + a;
-    link.textContent = a;
-    el.replaceWith(link);
-  });
-</script>
 </body>
 </html>
