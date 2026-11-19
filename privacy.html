@@ -28,11 +28,20 @@
   <p>The game collects no data from anyone, including children.</p>
 
   <h2>Contact</h2>
-  <p>Questions: <a href="mailto:holdout@dadgar.se">holdout@dadgar.se</a></p>
+  <p>Questions: <span class="email" data-u="holdout" data-d="dadgar.se">holdout (at) dadgar.se</span></p>
 </main>
 <footer>
   <a href="./">Home</a>
   <a href="support.html">Support</a>
 </footer>
+<script>
+  document.querySelectorAll('.email').forEach(function (el) {
+    var a = el.dataset.u + '@' + el.dataset.d;
+    var link = document.createElement('a');
+    link.href = 'mailto:' + a;
+    link.textContent = a;
+    el.replaceWith(link);
+  });
+</script>
 </body>
 </html>
