@@ -14,7 +14,7 @@
 
   <h2>Report a problem or send feedback</h2>
   <p>In the beta, the fastest way is inside the game: take a screenshot, tap the preview and choose <strong>Share Beta Feedback</strong>. Your note, the screenshot and your device model reach us directly.</p>
-  <p>You can also email <a href="mailto:holdout@dadgar.se">holdout@dadgar.se</a>.</p>
+  <p>You can also email <span class="email" data-u="holdout" data-d="dadgar.se">holdout (at) dadgar.se</span>.</p>
 
   <h2>Common questions</h2>
   <p><strong>Where is my progress saved?</strong><br>On your device only. Deleting the app deletes it.</p>
@@ -25,5 +25,14 @@
   <a href="./">Home</a>
   <a href="privacy.html">Privacy</a>
 </footer>
+<script>
+  document.querySelectorAll('.email').forEach(function (el) {
+    var a = el.dataset.u + '@' + el.dataset.d;
+    var link = document.createElement('a');
+    link.href = 'mailto:' + a;
+    link.textContent = a;
+    el.replaceWith(link);
+  });
+</script>
 </body>
 </html>
